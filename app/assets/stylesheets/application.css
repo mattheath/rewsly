@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
+.alert {
+
+	padding: 1em;
+	background-color: #ffeeee;
+	color: #cc0000;
+
+}
