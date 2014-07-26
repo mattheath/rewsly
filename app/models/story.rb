@@ -3,6 +3,8 @@ class Story < ActiveRecord::Base
   scope :popular, -> { where('upvotes >= ?', 4)}
   scope :recent, -> { where('created_at >= ?', Date.today)}
 
+  belongs_to :user
+
   def self.search_for(query)
     where('title LIKE :query OR category LIKE :query', query: "%#{query}%")
   end
