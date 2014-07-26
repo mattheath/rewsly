@@ -7,6 +7,7 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find params[:id]
+    @comment = Comment.new(:story => @story)
   end
 
   def new
